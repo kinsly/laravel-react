@@ -70,8 +70,6 @@
                         </a>
                     @endif
                     </div>
-                    user: admin@gmail.com <br/>
-                    pw: 920720455
                 </div>
             </div>
         </div>
