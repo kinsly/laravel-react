@@ -1,12 +1,27 @@
-## Table Structure
-fd_categories = id | name | parent_id
-fd_pictures = name | alt | thumbnail_url | fd_item_id
-fd_items = title | card_tag | card_info | unit_price | ratings | summary | description (rtf) | fd_category_id
-fd_featured_items = fd_items_id
 
-fd_cart = user_id | fd_items_Id | quantity | status
+# Laravel React
 
-fd_checkout = user_id | total_amount | status | payment_method
+This is a sample project showing use of React with Laravel. 
+check demo:(dashboard access is request only feature for now)
+website: https://demo.zmenia.com/
+dashboard: https://demo.zmenia.com/dashboard
 
-fd_checkout_items = fd_checkout_id | user_id | unit_price | quantity | total | isCompleted | picture_url
 
+Used Languages are
+- Laravel 10.X
+- React 18.X
+- TypeScript
+- Php 8.1
+- Blade
+- CSS
+- Bootstrap
+- Inertia
+- Axios
+- JavaScript
+
+## Up comming Features
+- Integrating Strip payment system
+- PHP Unit testing
+- Front end testing
+- Changing interface for smooth experience
+- Adding permissions for each users to cover all the actions in dashboard.
