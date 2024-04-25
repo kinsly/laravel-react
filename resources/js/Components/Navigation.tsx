@@ -30,8 +30,8 @@ export default function Navigation({user='', cart_item_quantity=0}:{user?:User|'
                 <a href="#" className="text-white">
                     <small className="text-white mx-2">Terms of Use</small>/
                 </a>
-                <a href="#" className="text-white">
-                    <small className="text-white ms-2">Sales and Refunds</small>
+                <a href={route('dashboard')} className="text-white">
+                    <small className="text-white ms-2">Dashboard</small>
                 </a>
                 </div>
             </div>
@@ -39,9 +39,9 @@ export default function Navigation({user='', cart_item_quantity=0}:{user?:User|'
 
             <div className="container px-0">
             <nav className="navbar navbar-light bg-white navbar-expand-xl">
-                <a href="index.html" className="navbar-brand">
+                <Link href={route('home')} className="navbar-brand">
                 <h1 className="text-primary display-6">Fruitables</h1>
-                </a>
+                </Link>
                 <button
                 className="navbar-toggler py-2 px-3"
                 type="button"

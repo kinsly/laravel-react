@@ -1,4 +1,4 @@
-import { Categories } from "@/types"
+import { Category } from "@/types"
 import { Link, usePage } from "@inertiajs/react"
 
 
@@ -9,7 +9,7 @@ export default function ItemCategories(
   }:
   {
     className:string,
-    categories:Categories[]
+    categories:Category[]
   }
 )
 {

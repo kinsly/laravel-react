@@ -53,12 +53,6 @@ export default function GuestLayout({user='', children, cart_item_quantity=0 }: 
         <Copyrights/>
         {/* Copyright End */}
 
-        {/* Back to Top */}
-        <a
-            href="#"
-            className="btn btn-primary border-3 border-primary rounded-circle back-to-top"
-        >
-            <i className="fa fa-arrow-up" />
-        </a>            
+        {/* Back to Top */}         
 </> );
 }

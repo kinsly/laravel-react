@@ -27,7 +27,7 @@ export default function Register(){
 
   return(
     <GuestLayout>
-      <SinglePageHeader/>
+      <SinglePageHeader title="Register Now"/>
       <div className="container-fluid py-5">
         <div className="container col-md-6">
          <div className="justify-content-center">

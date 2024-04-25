@@ -1,4 +1,5 @@
 import { Cart } from "@/types"
+import { Link } from "@inertiajs/react"
 
 export default function BestSellerCardhr(
   {
@@ -50,10 +51,10 @@ export default function BestSellerCardhr(
                     cart
                   </button>
                   :
-                  <a  href="#"
+                  <Link  href={route('cart.index')}
                     className="btn border border-secondary rounded-pill px-3 text-primary">
                     <i className="fa fa-shopping-bag me-2 text-primary" /> View Cart
-                  </a>
+                  </Link>
             }
             
         </div>

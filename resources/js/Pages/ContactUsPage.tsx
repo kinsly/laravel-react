@@ -10,7 +10,7 @@ export default function ContactUsPage({auth, cart_item_quantity}: PageProps)
   return(
     <GuestLayout  user={auth?.user} cart_item_quantity={cart_item_quantity}>
       <Head title="Contact us"/>
-      <SinglePageHeader title="Checkout"/>
+      <SinglePageHeader title="Contact Us"/>
       <div className="container-fluid contact py-5">
         <div className="container py-5">
           <div className="p-5 bg-light rounded">

@@ -31,7 +31,7 @@ export default function Login({ status, canResetPassword }: { status?: string, c
   return(
     <GuestLayout>
       <Head title="Log in" />
-      <SinglePageHeader/>
+      <SinglePageHeader title="Login"/>
       <div className="container-fluid py-5" ref={scrollToView}>
         <div className="container col-md-6">
          <div className="justify-content-center">

@@ -14,7 +14,7 @@ export default function EditUser({ auth, mustVerifyEmail, status }: PageProps<{ 
   return(
     <GuestLayout user={auth.user}>
       <Head title="Edit profile information" />
-      <SinglePageHeader/>
+      <SinglePageHeader title="Edit profile"/>
       <div className="container-fluid py-5">
         <div className="container col-md-6">
          <div className="justify-content-center">

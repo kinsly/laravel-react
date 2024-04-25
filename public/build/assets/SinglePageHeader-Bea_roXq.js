@@ -1,0 +1,1 @@
+import{j as e}from"./app-Bg0_C09o.js";function a({title:t}){return e.jsxs("div",{className:"container-fluid page-header py-5",children:[e.jsx("h1",{className:"text-center text-white display-6",children:t}),e.jsx("ol",{className:"breadcrumb justify-content-center mb-0"})]})}export{a as S};
