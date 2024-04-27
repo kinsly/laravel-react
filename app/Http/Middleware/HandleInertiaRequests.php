@@ -38,7 +38,7 @@ class HandleInertiaRequests extends Middleware
             $user = User::with(['carts' => function($query){
                 return $query->where('status','incomplete')->withCount('items');
             }])->find($user_id);
-            $cart_item_quantity = $user->carts[0]->items_count;
+            $cart_item_quantity = (!$user->carts->isEmpty())? $user->carts[0]->items_count: 0;
         }
 
         
