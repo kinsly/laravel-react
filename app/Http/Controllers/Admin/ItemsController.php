@@ -153,11 +153,10 @@ class ItemsController extends Controller
                 $image->fd_item_id =  $item->id;
                 $image->save();
             }
-                
-            
         }
         
-        return redirect()->back()
+        
+        return redirect()->route('items.edit',[$item->id])
                 ->withSuccess('Item updated successfully.');
     }
 
