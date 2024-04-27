@@ -21,7 +21,8 @@ Used Languages are
 
 ## Up comming Features
 - Integrating Strip payment system
+- Mailing system
 - PHP Unit testing
-- Front end testing
+- Frontend testing
 - Changing interface for smooth experience
 - Adding permissions for each users to cover all the actions in dashboard.
