@@ -6,6 +6,10 @@ check demo:(dashboard access is request only feature for now)
 website: https://demo.zmenia.com/
 dashboard: https://demo.zmenia.com/dashboard
 
+## Setup
+- Git clone project
+- composer update
+- npm install
 
 Used Languages are
 - Laravel 10.X
@@ -19,6 +23,9 @@ Used Languages are
 - Axios
 - JavaScript
 
+## Currently developing
+- PHP Unit Tests for backend
+- Cypress (End to End) - to test React front
 ## Up comming Features
 - Integrating Strip payment system
 - Mailing system
