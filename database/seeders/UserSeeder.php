@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
-class SuperAdminSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -29,5 +29,14 @@ class SuperAdminSeeder extends Seeder
             'password' => Hash::make('920720455')
         ]);
         $admin->assignRole('Admin');
+
+
+        // Creating Admin User
+        $client = User::create([
+            'name' => 'client', 
+            'email' => 'client@gmail.com',
+            'password' => Hash::make('920720455')
+        ]);
+        
     }
 }

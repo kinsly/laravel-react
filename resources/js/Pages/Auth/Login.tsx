@@ -64,7 +64,7 @@ export default function Login({ status, canResetPassword }: { status?: string, c
               </div>
 
               <div className="form-group row form-item w-100 py-2">
-                <label htmlFor="inputPassword3" className="col-sm-4 col-form-label">
+                <label htmlFor="inputPassword" className="col-sm-4 col-form-label">
                   Password
                 </label>
                 <div className="col-sm-8">
@@ -73,7 +73,7 @@ export default function Login({ status, canResetPassword }: { status?: string, c
                     className={errors.password ? "form-control is-invalid" : "form-control"} 
                     name="password"
                     value={data.password}
-                    id="inputPassword3"
+                    id="inputPassword"
                     placeholder="Password"
                     autoComplete="new-password"
                     onChange={(e) => setData('password', e.target.value)}
@@ -100,6 +100,7 @@ export default function Login({ status, canResetPassword }: { status?: string, c
               <div className="form-group row justify-content-center">
                 <div className="col-sm-10 text-center">
                 <button
+                    id='submitBtn'
                     type="submit"
                     className={`btn border-secondary py-2 px-4 text-uppercase text-primary ${processing && 'disabled'}`}
                   >

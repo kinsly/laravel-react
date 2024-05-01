@@ -31,11 +31,6 @@ export default function Shop({auth, items, categories, cart_item_quantity}:PageP
       preserveState: true,
       replace: false,
       preserveScroll: true,
-      onStart: visit => {console.log(visit)},
-      onProgress: progress => {console.log(progress)},
-      onSuccess: (page)=> {},
-      onError: errors => {},
-      onFinish: visit => {},
     })
   } 
 

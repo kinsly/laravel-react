@@ -3,9 +3,10 @@ import { EventHandler, useEffect, useState } from "react";
 export default function PriceSlider({onPriceChange, defaultPrice}:{ onPriceChange: (price:number) => void, defaultPrice:number })
 {
   const [price, setPrice] = useState(0);
-
+  const [testname, setTestName] = useState('Price s');
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTestName('price changed');
     setPrice(parseInt(event.target.value));
   }
 
@@ -20,12 +21,11 @@ export default function PriceSlider({onPriceChange, defaultPrice}:{ onPriceChang
 
   return(
     <div className="mb-3">
-      <h4 className="mb-2">Price</h4>
+      <h4 className="mb-2">{testname}</h4>
       <input
+        id="priceSlider"
         type="range"
         className="form-range w-100"
-        id="rangeInput"
-        name="rangeInput"
         min={0}
         max={100}
         value={price}
@@ -33,11 +33,8 @@ export default function PriceSlider({onPriceChange, defaultPrice}:{ onPriceChang
         onMouseUp={handleSliderChange}
       />
       <output
-        id="amount"
-        name="amount"
-        min-velue={0}
-        max-value={500}
-        htmlFor="rangeInput"
+        min-value={0}
+        max-value={100}
       >
         {price}
       </output>

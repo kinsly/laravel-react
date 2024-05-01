@@ -51,11 +51,11 @@ export default function FruitCard(
                   cart?.length == 0?
                   <button onClick={() => handleAddtoCart(id)}
                 
-                  className="btn border border-secondary rounded-pill px-3 text-primary">
+                  className="btn border border-secondary rounded-pill px-3 text-primary cy-test-fruitCardAction">
                       Add to Cart
                   </button>
                   : 
-                  <Link href={route('cart.index')} className="btn border border-secondary rounded-pill px-3 text-primary">
+                  <Link href={route('cart.index')} className="btn border border-secondary rounded-pill px-3 text-primary cy-test-fruitCardAction">
                       View Cart
                   </Link>
                 }

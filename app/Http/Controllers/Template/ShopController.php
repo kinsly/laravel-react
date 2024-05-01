@@ -34,7 +34,14 @@ class ShopController extends Controller
     **/
     public function category(string $category_id, string $categoryName):Response
     {
-        $items = FdItem::with('image')->where('status', 1)->where('fd_category_id',$category_id)->paginate(20);
+        // $items = FdItem::with('image')->where('status', 1)->where('fd_category_id',$category_id)->paginate(20);
+
+        $items = FdItem::with('image')->with(
+            ['carts' => function ($query) {
+                $query->where('status', 'incomplete')->whereNull('fd_cart_items.deleted_at')->where('user_id', Auth::user()?->id);
+            }]
+        )->where('status', 1)->where('fd_category_id',$category_id)->paginate(20);
+
         $categories = FdCategory::whereNull('parent_id')->get();
         return Inertia::render('Shop',[
             'items'=> $items,
@@ -47,7 +54,14 @@ class ShopController extends Controller
     **/
     public function price(int $price): Response
     {
-        $items = FdItem::with('image')->where('status', 1)->where('unit_price','<=',$price)->orderBy('unit_price','desc')->paginate(20);
+        // $items = FdItem::with('image')->where('status', 1)->where('unit_price','<=',$price)->orderBy('unit_price','desc')->paginate(20);
+
+        $items = FdItem::with('image')->with(
+            ['carts' => function ($query) {
+                $query->where('status', 'incomplete')->whereNull('fd_cart_items.deleted_at')->where('user_id', Auth::user()?->id);
+            }]
+        )->where('status', 1)->where('unit_price','<=',$price)->orderBy('unit_price','desc')->paginate(20);
+
         $categories = FdCategory::whereNull('parent_id')->get();
         return Inertia::render('Shop',[
             'items'=> $items,
