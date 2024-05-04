@@ -10,6 +10,12 @@ dashboard: https://demo.zmenia.com/dashboard
 - Git clone project
 - composer update
 - npm install
+- php artisan storage:link
+- Grant proper permissions for stoage folder
+sudo chgrp -R www-data storage bootstrap/cache
+sudo chmod -R ug+rwx storage bootstrap/cache
+
+
 
 Used Languages are
 - Laravel 10.X
