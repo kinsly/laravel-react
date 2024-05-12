@@ -38,7 +38,7 @@ export default function CartTotal({cartItems=[]}:{cartItems:CartItem[]})
       className="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4"
       type="button"
     >
-      Proceed Checkout
+      Proceed Checkout (under development)
     </button>
   </div>
   )

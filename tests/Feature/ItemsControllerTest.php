@@ -12,6 +12,14 @@ use Tests\TestCase;
 
 class ItemsControllerTest extends TestCase
 {
+    use RefreshDatabase;
+
+    public function setUp(): void
+    {
+        parent::setUp();
+        $this->seed();
+    }
+
     /**
      * A basic feature test example.
      */

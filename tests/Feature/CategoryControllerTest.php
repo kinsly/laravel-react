@@ -4,8 +4,6 @@ namespace Tests\Feature;
 
 use App\Models\FdCategory;
 use App\Models\User;
-use Database\Factories\UserFactory;
-use Faker\Factory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -14,7 +12,13 @@ use Tests\TestCase;
  */
 class CategoryControllerTest extends TestCase
 {
-    // use RefreshDatabase;
+    use RefreshDatabase;
+
+    public function setUp(): void
+    {
+        parent::setUp();
+        $this->seed();
+    }
     
     
     /**

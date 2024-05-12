@@ -49,7 +49,7 @@ export default function Index(
             setFruits(response);
           });
     }
-
+    
     return (
     <GuestLayout user={auth?.user} cart_item_quantity={cart_item_quantity}>
         <Head title="Home - Buy all types of fruits at lowest price"/>

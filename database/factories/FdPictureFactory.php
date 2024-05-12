@@ -16,11 +16,10 @@ class FdPictureFactory extends Factory
      */
     public function definition(): array
     {  
-        
         return [
             'url' => fake()->imageUrl(640, 480, 'animals', true),
             'alt'=> fake()->words(3, true),
-            'thumbnail_url' => null,
+            'thumbnail_url' => fake()->imageUrl(640, 480, 'animals', true),
             'fd_item_id' => null,
         ];
     }

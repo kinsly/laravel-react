@@ -12,6 +12,9 @@ class FdCart extends Model
 {
     use HasFactory, SoftDeletes;
 
+    /**
+     * status = incomplete | complete
+     */
     protected $fillable = [
         'id','status', 'user_id'
     ];

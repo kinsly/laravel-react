@@ -18,7 +18,7 @@ class FdItemFactory extends Factory
     public function definition(): array
     {
         $category = FdCategory::factory()->create();
-        return [
+        $data = [
             'title' => fake()->name(), 
             'card_tag' => fake()->word(), 
             'card_info' => fake()->sentence(2, true), 
@@ -30,5 +30,15 @@ class FdItemFactory extends Factory
             'status' => true,
             'fd_category_id' =>  $category->id,
         ];
+        
+        if (!isset($this->attributes['fd_category_id'])) {
+                // Create a category if not provided
+                $category = FdCategory::factory()->create();
+                $data['fd_category_id'] = $category->id;
+        }
+        
+       
+
+        return $data;
     }
 }

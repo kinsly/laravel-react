@@ -108,16 +108,16 @@ class IndexController extends Controller
      */
     public function getItemsByCategory(string $category_id)
     {
-        $items = FdItem::with('image')->with(
+        $baseQuery = FdItem::with('image')->with(
             ['carts' => function ($query) {
                 $query->where('status', 'incomplete')->whereNull('fd_cart_items.deleted_at')->where('user_id', Auth::user()?->id);
             }]
         )->where('status', 1);
 
         if($category_id == 0){
-            $items =  $items->orderByDesc('created_at')->limit(10)->get();    
+            $items =  $baseQuery->orderByDesc('created_at')->limit(10)->get();    
         }else{
-            $items =  $items->where('fd_category_id',$category_id)->limit(5)->get();
+            $items =  $baseQuery->where('fd_category_id',$category_id)->limit(5)->get();
         }
         
         return $items;
