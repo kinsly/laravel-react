@@ -2,9 +2,9 @@
 # Laravel React
 ![Static Badge](https://img.shields.io/badge/laravel-lang-red)
 ![Static Badge](https://img.shields.io/badge/PHP-lang-red)
-![Static Badge](https://img.shields.io/badge/React-lang-green?labelColor=red)
-![Static Badge](https://img.shields.io/badge/TypeScript-lang-green?labelColor=red)
-![Static Badge](https://img.shields.io/badge/Cypress-testing-green?labelColor=red)
+![Static Badge](https://img.shields.io/badge/React-lang-green?labelColor=blue)
+![Static Badge](https://img.shields.io/badge/TypeScript-lang-green?labelColor=blue)
+![Static Badge](https://img.shields.io/badge/Cypress-testing-green)
 ![Static Badge](https://img.shields.io/badge/PHP%20Unit-testing-green)
 
 
@@ -49,7 +49,7 @@ Used Languages are
 
 ## Testing
 Backend Testing
-php artisan test --testsuite=Feature
+- php artisan test --testsuite=Feature
 
 front (end to end test)
-npx cypress open
+- npx cypress open
